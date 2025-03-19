@@ -14,10 +14,12 @@ class BasePage:
     def get_text(self, locator):
         return self.page.locator(locator).inner_text()
 
-    def check_checkbox(self, checkbox):
+    @staticmethod
+    def check_checkbox(checkbox):
         if not checkbox.is_checked():
             checkbox.check()
 
-    def uncheck_checkbox(self, checkbox):
+    @staticmethod
+    def uncheck_checkbox(checkbox):
         if checkbox.is_checked():
             checkbox.uncheck()
