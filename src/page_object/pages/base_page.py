@@ -15,9 +15,8 @@ class BasePage:
         return self.page.locator(locator).inner_text()
 
     def check_checkbox(self, checkbox):
-       if not checkbox.is_checked():
-           checkbox.check()
-
+        if not checkbox.is_checked():
+            checkbox.check()
 
     def uncheck_checkbox(self, checkbox):
         if checkbox.is_checked():

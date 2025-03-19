@@ -1,5 +1,3 @@
-import pytest
-
 from src.page_object.pages.blog_page import BlogPage
 from src.page_object.pages.get_in_touch_page import GetInTouch
 

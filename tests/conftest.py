@@ -18,3 +18,16 @@ def cached_leonard_info(page):
     lp = LeadershipPage(page)
     lp.click_on_leonard()
     return [lp.leonard_bio, lp.leonard_position]
+
+
+@pytest.fixture(scope="module")
+def articles_cached(page):
+    bp = BlogPage(page)
+    bp.click_accept_cookies_button()
+    bp.click_filter_by()
+    bp.click_cloud_and_dev_ops_filter()
+    cloud_and_dev_ops_articles = bp.articles
+    bp.click_filter_by()
+    bp.click_all_topics()
+    top_articles = bp.top_articles
+    return [cloud_and_dev_ops_articles, top_articles]

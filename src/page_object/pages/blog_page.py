@@ -28,7 +28,7 @@ class BlogPage(BasePage):
 
     @property
     def all_topics(self):
-        return self.find_elements(Locator.all_topics)
+        return self.find_element(Locator.all_topics)
 
     @property
     def top_articles(self):
